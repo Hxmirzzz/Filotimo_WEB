@@ -1,0 +1,43 @@
+<head>
+<title>Filotimo Beats For All The World</title>
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">
+
+        <!-- Bootstrap Custom -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/others_style.css') }}">
+
+        <!-- Shorcut icon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/Logo.png') }}">
+
+</head>
+
+<body style="background-image: url({{ url_for('static', filename='img/fondo.jpg') }})">
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo">
+        <h2>reate Your Account</h2>
+        <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm_password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="/login">Login</a>
+        </div>
+        <div class="back-link">
+            <a href="/">Back to Home</a>
+    </div>
+</body>

@@ -1,0 +1,34 @@
+<head>
+<title>Filotimo Beats For All The World</title>
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}">
+
+        <!-- Bootstrap Custom -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/others_style.css') }}">
+
+        <!-- Shorcut icon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/Logo.png') }}">
+
+</head>
+
+<body style="background-image: url({{ url_for('static', filename='img/fondo.jpg') }})">
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Logo" class="logo">
+        <form action="/login" method="post">
+        <h2>Contact Us</h2>
+            <p>Have questions, suggestions, or just want to say hello? We'd love to hear from you!</p>
+            <p>Reach out to us through the following options:</p>
+            <ul>
+                <li>Email: contact@filotimo.com</li>
+                <li>Phone: +57 (321) 385-0404</li>
+                <li>Address: Ciudad Bolivar, Bogota, Colombia</li>
+            </ul>
+            <div class="back-link">
+                <a href="/">Back to Home</a>
+        </form>
+    </div>
+</body>
